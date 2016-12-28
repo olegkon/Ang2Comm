@@ -1,0 +1,10 @@
+<h1> App Title: {{title}} </h1>
+
+<h1>Find Product By ID Using ProductService</h1>
+<form #f="ngForm" (ngSubmit) = "getProductByID(f.value)" >
+  <label for="productID">Enter Product ID</label>
+  <input id="productID" type="number" name="productID" ngModel>
+  <button type="submit">Find Product</button>
+</form>
+
+<h4>{{ productTitle}} {{productPrice}}</h4>
