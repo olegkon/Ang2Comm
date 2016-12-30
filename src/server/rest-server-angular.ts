@@ -24,26 +24,31 @@ const products = [
 
 
 function getProducts(): Product[] {
+    console.log("rest-server-angular:  getProducts()");
     return products;
 }
 
 
 app.get('/', (req, res) => {
+    console.log("rest-server-angular:  getRoot()  sending file  client/main.html");
     res.sendFile(path.join(__dirname, '../client/main.html'));
 });
 
 
 app.get('/products', (req, res) => {
+    console.log("rest-server-angular:  get Products()");
     res.json(getProducts());
 });
 
 
 function getProductById(productId: number): Product {
+    console.log("rest-server-angular:  getProductsById() id="+productId);
     return products.find(p => p.id === productId);
 }
 
 
 app.get('/products/:id', (req, res) => {
+    console.log("rest-server-angular:  getProduct() in JSON for id="+req.params.id);
     res.json(getProductById(parseInt(req.params.id)));
 });
 

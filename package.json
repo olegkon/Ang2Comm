@@ -10,13 +10,13 @@
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
       "tsc": "tsc",
-      "start1": "node build/my-express-server.js",
-      "dev": "nodemon build/my-express-server.js",
-      "devRest": "nodemon build/auction-rest-server.js",
-      "restServer": "nodemon build/auction-rest-server-angular.js",
-      "simpleWsServer": "node build/simple-websocket-server.js",
-      "twowayWsServer": "nodemon build/two-way-websocket-server.js",
-      "bidServer": "nodemon build/bids/bid-server.js"
+      "start1": "node src/build/server/my-express-server.js",
+      "dev": "nodemon src/build/server/my-express-server.js",
+      "devRest": "nodemon src/build/server/auction-rest-server.js",
+      "restServer": "nodemon src/build/server/auction-rest-server-angular.js",
+      "simpleWsServer": "node src/build/server/simple-websocket-server.js",
+      "twowayWsServer": "nodemon src/build/server/two-way-websocket-server.js",
+      "bidServer": "nodemon src/build/server/bids/bid-server.js"
   },
   "private": true,
   "dependencies": {
