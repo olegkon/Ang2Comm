@@ -1,0 +1,31 @@
+export class SurvSubmarketLoan {   // Data for Surveillance Summary (2525 - lower grid)
+
+    constructor (
+                  public region_full_name: string,
+                  public metcode_full_name: string,
+                  public subname: string,
+                  public sector: string,
+                  public RS_sub_inv_EOY: string,
+                  public RS_sub_inv_3: string,
+                  public RS_sub_askrent_EOY: string,
+                  public RS_sub_effrent_EOY: string,
+                  public RS_sub_askrent_3: string,
+                  public RS_sub_effrent_3: string,
+                  public RS_sub_caprate_1: string,
+                  public current_balance: string,
+                  public rs_forecasted_value_chg: string,
+                  public rs_forecasted_noi_chg: string,
+                  public rs_forecasted_cap_rate: string,
+                  public no_of_loans: string,
+                  public fixed_percentage: string,
+                  public pd_cum: string,
+                  public ls_cum: string,
+                  public el_cum: string,
+                  public el_value: string,
+                  public dscr: string,
+                  public current_ltv: string,
+                  public interest_rate: string,
+                  public amortization_term_months: string,
+                  public remaining_term: string,
+                  public debt_yield: string) {}
+}
