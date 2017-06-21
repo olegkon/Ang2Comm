@@ -27,7 +27,7 @@ import { ChartModule }            from 'angular2-highcharts';
 import * as highcharts from 'highcharts';
 import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule, MdToolbarModule, MdCheckboxModule, MdButtonModule, MdMenuModule, MdTabsModule } from '@angular/material';
 
 // import { ProductService } from './product-service';
@@ -83,7 +83,7 @@ export declare let require : any;
         </md-tab-group -->
         
         <p-tabView>
-          <p-tabPanel header="Portfolio Analysis">
+          <p-tabPanel header="Portfolio Analysis" [selected]="true">
             Content 1
           </p-tabPanel>
           <p-tabPanel header="Surveillance">
@@ -104,17 +104,14 @@ export declare let require : any;
                   <span class="container-component">
                       <h2>Portfolio Composition</h2>
                       <p-dataGrid id="grid-portfolio-composition" [value]="arr" [paginator]="true" [rows]="1">
-                          <!--header>
-                              Portfolio Composition
-                          </header-->
-                          <template let-pcRow>
+                          <ng-template let-pcRow>
                               <div class="divTable">
                                   <div class="divRow" *ngFor="let col of cols; let i=index" >
                                       <span class="divCell align-left"><b>{{col.header}}</b></span>
                                       <span class="divCell align-right">{{portfolioComposition[col.field]}}</span>
                                   </div>
                               </div>
-                          </template>
+                          </ng-template>
                       </p-dataGrid>
                   </span>
 
@@ -1043,7 +1040,7 @@ export class AppComponent {
 @NgModule({
     imports:      [ FormsModule, HttpModule, AgGridModule.withComponents(['']),
       BrowserModule, ChartModule, //.forRoot(require('highcharts')),
-      MdToolbarModule, MdCheckboxModule, MdMenuModule, MdButtonModule, BrowserAnimationsModule, MdTabsModule,
+      MdToolbarModule, MdCheckboxModule, MdMenuModule, MdButtonModule,  MdTabsModule,  //BrowserAnimationsModule,
       SharedModule, DropdownModule, DataGridModule, PanelModule, TabViewModule ],  // was AgGridModule.forRoot, ChartModule
     providers: [{
       provide: HighchartsStatic,
